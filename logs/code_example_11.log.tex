@@ -1,0 +1,9 @@
+. program hypothetical_analysis, rclass
+  1.   version 18
+  2.   mepoisson outcome i.intervention i.nondisrupted ||cluster:, vce(robust)
+  3.   lincom _b[1.intervention] + _b[1.nondisrupted]
+  4.   return scalar es4_Hypothetical      = r(estimate)
+  5.   return scalar se4_Hypothetical      = r(se)
+  6.   return scalar reject4_Hypothetical  = r(p) < 0.05
+  7. end
+{\smallskip}

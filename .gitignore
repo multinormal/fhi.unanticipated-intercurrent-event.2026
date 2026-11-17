@@ -1,0 +1,13 @@
+.DS_Store
+
+# LaTeX build files (the PDF is copied to the top level by make)
+latex/*.aux
+latex/*.bbl
+latex/*.blg
+latex/*.fdb_latexmk
+latex/*.fls
+latex/*.log
+latex/*.pdf
+
+# Log of a batch-mode Stata run
+*.log

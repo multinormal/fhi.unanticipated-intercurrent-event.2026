@@ -1,0 +1,60 @@
+. use disrupted , clear
+{\smallskip}
+. codebook
+{\smallskip}
+\HLI{80}
+cluster                                          Cluster identifier (observable)
+\HLI{80}
+{\smallskip}
+                  Type: Numeric (byte)
+{\smallskip}
+                 Range: [1,59]                        Units: 1
+         Unique values: 59                        Missing .: 0/2,356
+{\smallskip}
+                  Mean: 33.1668
+             Std. dev.: 17.5358
+{\smallskip}
+           Percentiles:     10\%       25\%       50\%       75\%       90\%
+                             10        19        33        53        53
+{\smallskip}
+\HLI{80}
+intervention                                           Intervention (observable)
+\HLI{80}
+{\smallskip}
+                  Type: Numeric (byte)
+                 Label: intervention
+{\smallskip}
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,356
+{\smallskip}
+            Tabulation: Freq.   Numeric  Label
+                          991         0  Control
+                        1,365         1  Intervention
+{\smallskip}
+\HLI{80}
+nondisrupted                                          Not disrupted (observable)
+\HLI{80}
+{\smallskip}
+                  Type: Numeric (float)
+                 Label: nondisrupted
+{\smallskip}
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,356
+{\smallskip}
+            Tabulation: Freq.   Numeric  Label
+                        1,844         0  Disrupted
+                          512         1  Not disrupted
+{\smallskip}
+\HLI{80}
+outcome                                                     Outcome (observable)
+\HLI{80}
+{\smallskip}
+                  Type: Numeric (float)
+                 Label: outcome
+{\smallskip}
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,356
+{\smallskip}
+            Tabulation: Freq.   Numeric  Label
+                        2,011         0  No morbidity or mortality
+                          345         1  Morbidity or mortality

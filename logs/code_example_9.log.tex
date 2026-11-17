@@ -1,0 +1,10 @@
+. program mITT_analysis, rclass
+  1.   version 18
+  2.   local included !intervention | nondisrupted
+  3.   mepoisson outcome i.intervention if `included' ||cluster: , vce(robust)
+  4.   return scalar es2_mITT      = _b[1.intervention]
+  5.   return scalar se2_mITT      = _se[1.intervention]
+  6.   return scalar reject2_mITT  =                                        ///
+>                     r(table)["pvalue", "outcome:1.intervention"] < 0.05
+  7. end
+{\smallskip}

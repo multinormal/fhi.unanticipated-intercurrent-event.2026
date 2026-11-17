@@ -1,0 +1,19 @@
+. program simulate_participants, nclass
+  1.   version 18
+  2.   quietly expand exp(log_cluster_size)
+  3.   generate nondisrupted = intervention *                               ///
+>                              (runiform() < \$nondisrupted_prop)
+  4.   generate log_risk     = \$log_control_risk + log_cluster_risk +       ///
+>                              (nondisrupted * \$log_rr)
+  5.   generate outcome      = rbinomial(1, exp(log_risk))
+  6.   label variable nondisrupted "Not disrupted (observable)"
+  7.   label define   nondisrupted 0 "Disrupted"                            ///
+>                                  1 "Not disrupted"
+  8.   label values   nondisrupted nondisrupted
+  9.   label variable log_risk     "Log risk (unobservable)"
+ 10.   label variable outcome      "Outcome (observable)"
+ 11.   label define   outcome      0 "No morbidity or mortality"            ///
+>                                  1 "Morbidity or mortality"
+ 12.   label values   outcome      outcome
+ 13. end
+{\smallskip}

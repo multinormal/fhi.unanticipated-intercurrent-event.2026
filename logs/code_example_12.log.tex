@@ -1,0 +1,12 @@
+. program simulate_trial, rclass
+  1.   version 18
+  2.   clear
+  3.   simulate_clusters
+  4.   simulate_participants
+  5.   foreach method in prespecified mITT astreated hypothetical {\lbr}
+  6.     `method'_analysis
+  7.     return add
+  8.   {\rbr}
+  9.   ereturn clear
+ 10. end
+{\smallskip}

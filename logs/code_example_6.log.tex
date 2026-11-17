@@ -1,0 +1,16 @@
+. program simulate_clusters, nclass
+  1.   version 18
+  2.   quietly set obs \$num_clusters
+  3.   generate byte cluster     = _n
+  4.   generate log_cluster_risk = rnormal(0, sqrt(\$cluster_var))
+  5.   generate log_cluster_size = rnormal(\$cluster_sz_mean, \$cluster_sz_sd)
+  6.   splitsample , generate(intervention) values(0 1) rround
+  7.   label variable cluster          "Cluster identifier (observable)"
+  8.   label variable log_cluster_risk "Log cluster risk (unobservable)"
+  9.   label variable log_cluster_size "Log cluster size (observable)"
+ 10.   label variable intervention     "Intervention (observable)"
+ 11.   label define   intervention     0 "Control"                          ///
+>                                      1 "Intervention"
+ 12.   label values   intervention     intervention
+ 13. end
+{\smallskip}

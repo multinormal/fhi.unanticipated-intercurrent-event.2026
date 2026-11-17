@@ -1,0 +1,9 @@
+. program astreated_analysis, rclass
+  1.   version 18
+  2.   mepoisson outcome i.nondisrupted ||cluster:, vce(robust)
+  3.   return scalar es3_AsTreated      = _b[1.nondisrupted]
+  4.   return scalar se3_AsTreated      = _se[1.nondisrupted]
+  5.   return scalar reject3_AsTreated  =                                 ///
+>                       r(table)["pvalue", "outcome:1.nondisrupted"] < 0.05
+  6. end
+{\smallskip}

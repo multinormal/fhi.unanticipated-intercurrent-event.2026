@@ -1,0 +1,9 @@
+. program prespecified_analysis, rclass
+  1.   version 18
+  2.   mepoisson outcome i.intervention ||cluster:, vce(robust)
+  3.   return scalar es1_Prespecified      = _b[1.intervention]
+  4.   return scalar se1_Prespecified      = _se[1.intervention]
+  5.   return scalar reject1_Prespecified  =                                ///
+>                     r(table)["pvalue", "outcome:1.intervention"] < 0.05
+  6. end
+{\smallskip}

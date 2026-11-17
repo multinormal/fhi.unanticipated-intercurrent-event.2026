@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite them as below."
+title: "Handling an Unanticipated Intercurrent Event in a Digital Health Intervention Trial"
+version: "1.0"
+authors:
+  - family-names: Venkateswaran
+    given-names: Mahima
+    orcid: "https://orcid.org/0000-0002-1226-5685"
+    affiliation: Norwegian Institute of Public Health
+  - family-names: Rose
+    given-names: Christopher James
+    orcid: "https://orcid.org/0000-0001-6457-8168"
+    affiliation: Norwegian Institute of Public Health
+abstract: >-
+  Supplementary Materials, with the Stata code and output used to produce
+  them, describing a simulation study comparing candidate analysis
+  strategies for a cluster-randomized trial in which some participants
+  randomized to the intervention could not receive it, and the
+  application of the chosen strategy to a fictitious trial dataset.

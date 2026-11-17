@@ -1,0 +1,27 @@
+. mepoisson outcome i.intervention ||cluster:, vce(robust) eform(RR) nolog
+{\smallskip}
+Mixed-effects Poisson regression                Number of obs     =      2,356
+Group variable: cluster                         Number of groups  =         59
+{\smallskip}
+                                                Obs per group:
+                                                              min =          2
+                                                              avg =       39.9
+                                                              max =        412
+{\smallskip}
+Integration method: mvaghermite                 Integration pts.  =          7
+{\smallskip}
+                                                Wald chi2(1)      =       0.01
+Log pseudolikelihood = -1007.3197               Prob > chi2       =     0.9214
+                                (Std. err. adjusted for 59 clusters in cluster)
+\HLI{14}{\TOPT}\HLI{64}
+              {\VBAR}               Robust
+      outcome {\VBAR}         RR   std. err.      z    P>|z|     [95\% conf. interval]
+\HLI{14}{\PLUS}\HLI{64}
+ intervention {\VBAR}
+Intervention  {\VBAR}       1.01       0.15     0.10   0.921         0.76        1.35
+        _cons {\VBAR}       0.15       0.02   -18.19   0.000         0.12        0.18
+\HLI{14}{\PLUS}\HLI{64}
+cluster       {\VBAR}
+    var(_cons){\VBAR}       0.03       0.04                          0.00        0.39
+\HLI{14}{\BOTT}\HLI{64}
+Note: Estimates are transformed only in the first equation.

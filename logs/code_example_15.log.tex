@@ -1,0 +1,36 @@
+. generate bias = 100 * ((\$log_rr - es) / \$log_rr)
+(24 missing values generated)
+{\smallskip}
+. bysort method: regress bias , noheader
+{\smallskip}
+\HLI{80}
+-> method = 1_Prespecified
+\HLI{13}{\TOPT}\HLI{64}
+        bias {\VBAR} Coefficient  Std. err.      t    P>|t|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+       _cons {\VBAR}      65.00       1.61    40.48   0.000        61.85       68.15
+\HLI{13}{\BOTT}\HLI{64}
+{\smallskip}
+\HLI{80}
+-> method = 2_mITT
+\HLI{13}{\TOPT}\HLI{64}
+        bias {\VBAR} Coefficient  Std. err.      t    P>|t|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+       _cons {\VBAR}      -3.61       2.18    -1.66   0.097        -7.88        0.66
+\HLI{13}{\BOTT}\HLI{64}
+{\smallskip}
+\HLI{80}
+-> method = 3_AsTreated
+\HLI{13}{\TOPT}\HLI{64}
+        bias {\VBAR} Coefficient  Std. err.      t    P>|t|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+       _cons {\VBAR}      -3.59       1.92    -1.87   0.061        -7.35        0.17
+\HLI{13}{\BOTT}\HLI{64}
+{\smallskip}
+\HLI{80}
+-> method = 4_Hypothetical
+\HLI{13}{\TOPT}\HLI{64}
+        bias {\VBAR} Coefficient  Std. err.      t    P>|t|     [95\% conf. interval]
+\HLI{13}{\PLUS}\HLI{64}
+       _cons {\VBAR}      -3.70       2.15    -1.72   0.086        -7.91        0.52
+\HLI{13}{\BOTT}\HLI{64}

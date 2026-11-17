@@ -1,0 +1,20 @@
+. generate simulation = _n
+{\smallskip}
+. tempvar method
+{\smallskip}
+. reshape long es se reject , i(simulation) j(`method') string
+(j = 1_Prespecified 2_mITT 3_AsTreated 4_Hypothetical)
+{\smallskip}
+Data                               Wide   ->   Long
+\HLI{77}
+Number of observations            1,000   ->   4,000       
+Number of variables                  13   ->   5           
+j variable (4 values)                     ->   __000000
+xij variables:
+es1_Prespecified es2_mITT ... es4_Hypothetical-> es
+se1_Prespecified se2_mITT ... se4_Hypothetical-> se
+reject1_Prespecified reject2_mITT ... reject4_Hypothetical->reject
+\HLI{77}
+{\smallskip}
+. encode `method', generate(method)
+{\smallskip}
